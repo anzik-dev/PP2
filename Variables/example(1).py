@@ -1,4 +1,9 @@
-x = 5
-y = "John"
-print(x)
-print(y)
+x = "awesome"
+
+def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()
+
+print("Python is " + x)
