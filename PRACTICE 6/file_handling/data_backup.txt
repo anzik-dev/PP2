@@ -1,0 +1,3 @@
+Hello, this is a sample file.
+Python file handling practice.
+This is the third line.
