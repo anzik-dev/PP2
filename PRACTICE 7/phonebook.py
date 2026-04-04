@@ -72,7 +72,7 @@ def import_from_csv():
     conn = connect()
     cur = conn.cursor()
     try:
-        with open("contacts.csv", "r") as file:
+        with open("PRACTICE 7\contacts.csv", "r") as file:
             reader = csv.reader(file)
             next(reader)
             count = 0
