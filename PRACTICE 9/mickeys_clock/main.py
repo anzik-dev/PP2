@@ -1,5 +1,6 @@
 import pygame
-import datetime
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 pygame.init()
 
@@ -39,14 +40,13 @@ while not done:
         if event.type == pygame.QUIT:
             done = True
 
-    
-    now = datetime.datetime.now()
+    pygame.draw.circle(screen, (255,0,0), center, 5)
+    now = datetime.now(ZoneInfo("Asia/Almaty"))
     seconds = now.second
     minutes = now.minute
-
     
-    angle_sec = seconds * 6
-    angle_min = minutes * 6 + (seconds / 10) 
+    angle_sec = seconds * 6 + 180
+    angle_min = minutes * 6 + seconds * 0.1 + 180
 
     screen.fill((255, 255, 255))
     screen.blit(main_image, rect_main)
