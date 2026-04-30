@@ -115,6 +115,7 @@ class Player(pygame.sprite.Sprite):
             # Если с кастомным цветом беда — берем обычную картинку
             print(f"Предупреждение: Файл {image_path} не найден. Загружен стандартный Player.png")
             self.image = pygame.image.load(r"TSIS\RACER\Player.png")
+        self.image_normal = self.image
             
         self.image_broken = pygame.image.load(r"TSIS\RACER\broken.png") 
         self.image_exploded = pygame.image.load(r"TSIS\RACER\exploded.png")
